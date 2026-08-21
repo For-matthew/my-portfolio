@@ -1,13 +1,3 @@
-// Ruler ticks
-const ruler = document.getElementById('ruler');
-const rulerWidth = window.innerWidth;
-for (let x = 0; x < rulerWidth; x += 40) {
-  const s = document.createElement('span');
-  s.style.left = x + 'px';
-  s.textContent = x;
-  ruler.appendChild(s);
-}
-
 // Nav border on scroll
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
@@ -21,8 +11,9 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
 // Contact form
-// NOTE: Placeholder lang ito for now. Kapag ready na tayo sa PHP backend,
-// papalitan natin ito ng fetch() call papunta sa contact.php.
+// NOTE: Placeholder lang ito for now. Kapag ready na tayo sa backend
+// (Vercel serverless function papuntang email service), papalitan natin ito
+// ng fetch() call papunta sa /api/contact.
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
   contactForm.addEventListener('submit', (event) => {
