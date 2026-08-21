@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community Pulse Survey</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      color: #24324a;
+      background:
+        radial-gradient(circle at top left, #d9f7f1, transparent 35%),
+        linear-gradient(135deg, #f7f4ff, #eaf7ff);
+      padding: 40px 20px;
+    }
+
+    .card {
+      width: min(720px, 100%);
+      margin: auto;
+      padding: 42px;
+      background: rgba(255, 255, 255, 0.96);
+      border-radius: 24px;
+      box-shadow: 0 20px 60px rgba(46, 58, 89, 0.15);
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      text-align: center;
+      color: #463b78;
+    }
+
+    #description {
+      margin: 0 auto 32px;
+      max-width: 580px;
+      text-align: center;
+      line-height: 1.6;
+      color: #65708a;
+    }
+
+    .field {
+      margin-bottom: 24px;
+    }
+
+    label,
+    legend {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 700;
+      color: #35415d;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 13px 15px;
+      border: 2px solid #dce1ec;
+      border-radius: 12px;
+      background: #fff;
+      color: #24324a;
+      font: inherit;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #7667c9;
+      box-shadow: 0 0 0 4px rgba(118, 103, 201, 0.12);
+    }
+
+    textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    fieldset {
+      margin: 0 0 24px;
+      padding: 0;
+      border: 0;
+    }
+
+    .choice {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 10px 0;
+      font-weight: 400;
+    }
+
+    .choice input {
+      width: auto;
+      accent-color: #7667c9;
+    }
+
+    button {
+      width: 100%;
+      padding: 15px;
+      border: 0;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #7667c9, #4d9acb);
+      color: white;
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(76, 116, 190, 0.3);
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        padding: 28px 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="card">
+    <h1 id="title">Community Pulse Survey</h1>
+
+    <p id="description">
+      Tell us a little about yourself and help us understand what makes our
+      community a better place.
+    </p>
+
+    <form id="survey-form">
+      <div class="field">
+        <label id="name-label" for="name">Your name</label>
+        <input
+          id="name"
+          name="name"
+          type="text"
+          placeholder="Enter your name"
+          required
+        >
+      </div>
+
+      <div class="field">
+        <label id="email-label" for="email">Email address</label>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          placeholder="you@example.com"
+          required
+        >
+      </div>
+
+      <div class="field">
+        <label id="number-label" for="number">How many community events have you attended?</label>
+        <input
+          id="number"
+          name="events"
+          type="number"
+          min="0"
+          max="50"
+          placeholder="Enter a number from 0 to 50"
+        >
+      </div>
+
+      <div class="field">
+        <label for="dropdown">Which activity interests you most?</label>
+        <select id="dropdown" name="activity">
+          <option value="">Select an activity</option>
+          <option value="workshops">Workshops</option>
+          <option value="socials">Social gatherings</option>
+          <option value="volunteering">Volunteering</option>
+          <option value="sports">Sports and recreation</option>
+        </select>
+      </div>
+
+      <fieldset>
+        <legend>How often would you like to participate?</legend>
+
+        <label class="choice">
+          <input type="radio" name="frequency" value="weekly">
+          Weekly
+        </label>
+
+        <label class="choice">
+          <input type="radio" name="frequency" value="monthly">
+          Monthly
+        </label>
+
+        <label class="choice">
+          <input type="radio" name="frequency" value="occasionally">
+          Occasionally
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Which topics interest you?</legend>
+
+        <label class="choice">
+          <input type="checkbox" name="topics" value="education">
+          Education
+        </label>
+
+        <label class="choice">
+          <input type="checkbox" name="topics" value="health">
+          Health and wellness
+        </label>
+
+        <label class="choice">
+          <input type="checkbox" name="topics" value="environment">
+          Environment
+        </label>
+
+        <label class="choice">
+          <input type="checkbox" name="topics" value="technology">
+          Technology
+        </label>
+      </fieldset>
+
+      <div class="field">
+        <label for="comments">Additional comments</label>
+        <textarea
+          id="comments"
+          name="comments"
+          placeholder="Share an idea, suggestion, or anything else you'd like us to know..."
+        ></textarea>
+      </div>
+
+      <button id="submit" type="submit">Submit Survey</button>
+    </form>
+  </main>
+</body>
+</html>

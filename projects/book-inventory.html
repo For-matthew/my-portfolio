@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Inventory</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      padding: 50px 20px;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #eef4ff, #f8f2ff);
+      color: #243047;
+    }
+
+    h1 {
+      width: 90%;
+      max-width: 1000px;
+      margin: 0 auto 30px;
+      color: #3c3470;
+    }
+
+    table {
+      width: 90%;
+      max-width: 1000px;
+      margin: auto;
+      border-collapse: separate;
+      border-spacing: 0 10px;
+    }
+
+    th {
+      padding: 15px;
+      text-align: left;
+      color: white;
+      background-color: #51468a;
+    }
+
+    th:first-child {
+      border-radius: 10px 0 0 10px;
+    }
+
+    th:last-child {
+      border-radius: 0 10px 10px 0;
+    }
+
+    td {
+      padding: 18px 15px;
+    }
+
+    /* Attribute selectors for each row status */
+    tr[class="read"] {
+      background-image: linear-gradient(90deg, #e1f7e9, #f8fffa);
+    }
+
+    tr[class="to-read"] {
+      background-image: linear-gradient(90deg, #fff2c9, #fffdf4);
+    }
+
+    tr[class="in-progress"] {
+      background-image: linear-gradient(90deg, #e4e9ff, #fafbff);
+    }
+
+    tbody td:first-child {
+      font-weight: bold;
+    }
+
+    /* All spans */
+    span {
+      display: inline-block;
+    }
+
+    /* Status styling for To Read */
+    tr[class="to-read"] span[class="status"] {
+      border: 2px solid #d59b22;
+      background-image: linear-gradient(135deg, #ffe39a, #fff1bd);
+    }
+
+    /* Status styling for Read */
+    tr[class="read"] span[class="status"] {
+      border: 2px solid #3c9962;
+      background-image: linear-gradient(135deg, #a9e4bf, #d9f7e4);
+    }
+
+    /* Status styling for In Progress */
+    tr[class="in-progress"] span[class="status"] {
+      border: 2px solid #6575c9;
+      background-image: linear-gradient(135deg, #c5ceff, #e4e8ff);
+    }
+
+    /* Status and rate containers */
+    span[class="status"],
+    span[class^="rate"] {
+      height: 30px;
+      width: 105px;
+      padding: 6px 10px;
+      border-radius: 20px;
+      text-align: center;
+      font-size: 0.85rem;
+      font-weight: bold;
+    }
+
+    /* Rate container */
+    span[class^="rate"] {
+      width: auto;
+      padding: 4px 6px;
+      white-space: nowrap;
+    }
+
+    /* Individual rating circles */
+    span[class^="rate"] > span {
+      border: 1px solid #a8afbd;
+      border-radius: 50%;
+      margin: 0 2px;
+      height: 15px;
+      width: 15px;
+      background-color: #e0e3e9;
+    }
+
+    /* One rating */
+    span[class~="one"] > span:first-child {
+      background-image: linear-gradient(135deg, #ffd166, #f5a623);
+    }
+
+    /* Two ratings */
+    span[class~="two"] > span:nth-child(-n+2) {
+      background-image: linear-gradient(135deg, #ffd166, #f5a623);
+    }
+
+    /* Three ratings */
+    span[class~="three"] > span {
+      background-image: linear-gradient(135deg, #ffd166, #f5a623);
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Book Inventory</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Category</th>
+        <th>Status</th>
+        <th>Rate</th>
+      </tr>
+    </thead>
+
+    <tbody>
+
+      <tr class="read">
+        <td>The Midnight Library</td>
+        <td>Matt Haig</td>
+        <td>Fiction</td>
+        <td>
+          <span class="status">Read</span>
+        </td>
+        <td>
+          <span class="rate three">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </td>
+      </tr>
+
+      <tr class="to-read">
+        <td>Atomic Habits</td>
+        <td>James Clear</td>
+        <td>Self-Help</td>
+        <td>
+          <span class="status">To Read</span>
+        </td>
+        <td>
+          <span class="rate">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </td>
+      </tr>
+
+      <tr class="in-progress">
+        <td>Dune</td>
+        <td>Frank Herbert</td>
+        <td>Science Fiction</td>
+        <td>
+          <span class="status">In Progress</span>
+        </td>
+        <td>
+          <span class="rate">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </td>
+      </tr>
+
+      <tr class="read">
+        <td>Educated</td>
+        <td>Tara Westover</td>
+        <td>Memoir</td>
+        <td>
+          <span class="status">Read</span>
+        </td>
+        <td>
+          <span class="rate two">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </td>
+      </tr>
+
+      <tr class="read">
+        <td>The Hobbit</td>
+        <td>J.R.R. Tolkien</td>
+        <td>Fantasy</td>
+        <td>
+          <span class="status">Read</span>
+        </td>
+        <td>
+          <span class="rate one">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+
+</body>
+</html>

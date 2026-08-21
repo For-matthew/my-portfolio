@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Development Field Guide</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.7;
+      color: #263248;
+      background: #f5f7fb;
+    }
+
+    #navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 270px;
+      height: 100vh;
+      overflow-y: auto;
+      padding: 28px 0;
+      background: #172033;
+      color: white;
+      border-right: 4px solid #4ecdc4;
+    }
+
+    #navbar header {
+      padding: 0 25px 25px;
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #72e6dd;
+    }
+
+    .nav-link {
+      display: block;
+      padding: 13px 25px;
+      color: #d9e1ee;
+      text-decoration: none;
+      border-top: 1px solid #2b354a;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .nav-link:hover {
+      color: white;
+      background: #26344d;
+    }
+
+    #main-doc {
+      margin-left: 270px;
+      padding: 45px 55px;
+      max-width: 1100px;
+    }
+
+    .main-section {
+      margin-bottom: 55px;
+      padding: 30px;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 5px 20px rgba(30, 42, 65, 0.08);
+    }
+
+    .main-section header {
+      margin-bottom: 18px;
+      color: #176b68;
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    p {
+      margin: 15px 0;
+    }
+
+    code {
+      display: block;
+      margin: 15px 0;
+      padding: 15px 18px;
+      overflow-x: auto;
+      border-radius: 10px;
+      background: #20283a;
+      color: #9ef0e9;
+      font-family: "Courier New", monospace;
+    }
+
+    li {
+      margin: 8px 0;
+    }
+
+    strong {
+      color: #176b68;
+    }
+
+    @media (max-width: 800px) {
+      #navbar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        max-height: 280px;
+        border-right: 0;
+        border-bottom: 4px solid #4ecdc4;
+      }
+
+      #main-doc {
+        margin-left: 0;
+        padding: 25px 15px;
+      }
+
+      .main-section {
+        padding: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav id="navbar">
+    <header>Web Development Field Guide</header>
+
+    <a class="nav-link" href="#HTML_Foundations">HTML Foundations</a>
+    <a class="nav-link" href="#CSS_Styling">CSS Styling</a>
+    <a class="nav-link" href="#JavaScript_Basics">JavaScript Basics</a>
+    <a class="nav-link" href="#Responsive_Design">Responsive Design</a>
+    <a class="nav-link" href="#Development_Workflow">Development Workflow</a>
+  </nav>
+
+  <main id="main-doc">
+
+    <section class="main-section" id="HTML_Foundations">
+      <header>HTML Foundations</header>
+
+      <p>
+        HTML provides the structure of a web page. It tells the browser what
+        different pieces of content represent.
+      </p>
+
+      <p>
+        A well-structured document uses semantic elements so that browsers,
+        search engines, and assistive technologies can understand the page.
+      </p>
+
+      <code>&lt;h1&gt;My Web Page&lt;/h1&gt;</code>
+
+      <p>
+        Headings create a hierarchy for your content, while elements such as
+        paragraphs, lists, and sections organize related information.
+      </p>
+
+      <ul>
+        <li>Use meaningful semantic elements.</li>
+        <li>Keep heading levels logically organized.</li>
+        <li>Give images useful alternative text.</li>
+      </ul>
+
+      <code>&lt;p&gt;Welcome to my website.&lt;/p&gt;</code>
+    </section>
+
+    <section class="main-section" id="CSS_Styling">
+      <header>CSS Styling</header>
+
+      <p>
+        CSS controls the visual presentation of HTML. It can change colors,
+        spacing, typography, layouts, and animations.
+      </p>
+
+      <p>
+        Selectors determine which elements receive a particular style rule.
+        Properties then define exactly how those elements should appear.
+      </p>
+
+      <code>body { background: #f5f7fb; }</code>
+
+      <p>
+        Classes are useful when you want to reuse a particular visual style
+        across multiple elements.
+      </p>
+
+      <ul>
+        <li>Choose colors with sufficient contrast.</li>
+        <li>Use consistent spacing throughout a design.</li>
+        <li>Prefer reusable classes for repeated styles.</li>
+      </ul>
+
+      <code>.card { padding: 20px; border-radius: 12px; }</code>
+    </section>
+
+    <section class="main-section" id="JavaScript_Basics">
+      <header>JavaScript Basics</header>
+
+      <p>
+        JavaScript adds behavior and interactivity to web pages. It can respond
+        to user actions and update the document dynamically.
+      </p>
+
+      <p>
+        Variables allow programs to store information that can be used later.
+        Modern JavaScript commonly uses <strong>const</strong> and
+        <strong>let</strong>.
+      </p>
+
+      <code>const message = "Hello, web!";</code>
+
+      <p>
+        Functions group reusable instructions into a single operation. They can
+        accept information and return a result.
+      </p>
+
+      <ul>
+        <li>Use descriptive variable names.</li>
+        <li>Keep functions focused on one task.</li>
+        <li>Use event listeners for user interactions.</li>
+      </ul>
+
+      <code>function greet(name) { return `Hello, ${name}`; }</code>
+    </section>
+
+    <section class="main-section" id="Responsive_Design">
+      <header>Responsive Design</header>
+
+      <p>
+        Responsive design allows a website to adapt to different screen sizes.
+        A layout that works on a desktop should also remain usable on phones.
+      </p>
+
+      <p>
+        Flexible units, responsive images, and media queries are common tools
+        for creating adaptable interfaces.
+      </p>
+
+      <code>@media (max-width: 700px) { ... }</code>
+
+      <p>
+        Mobile-first design starts with a small screen and progressively adds
+        enhancements for larger displays.
+      </p>
+
+      <ul>
+        <li>Test layouts at several screen widths.</li>
+        <li>Avoid unnecessary horizontal scrolling.</li>
+        <li>Make interactive controls easy to tap.</li>
+      </ul>
+
+      <code>width: min(100%, 900px);</code>
+    </section>
+
+    <section class="main-section" id="Development_Workflow">
+      <header>Development Workflow</header>
+
+      <p>
+        A consistent workflow makes development easier to manage and debug.
+        Breaking a large task into smaller pieces helps you identify problems.
+      </p>
+
+      <p>
+        Version control systems allow developers to track changes and safely
+        experiment with new features.
+      </p>
+
+      <code>git status</code>
+
+      <p>
+        Before considering a project complete, test the interface, check the
+        console for errors, and verify that the layout works across devices.
+      </p>
+
+      <ul>
+        <li>Plan the structure before writing complex code.</li>
+        <li>Test features as you build them.</li>
+        <li>Review accessibility and responsive behavior.</li>
+        <li>Keep your code readable and maintainable.</li>
+      </ul>
+
+      <code>git add .</code>
+      <code>git commit -m "Finish documentation page"</code>
+    </section>
+
+  </main>
+
+</body>
+</html>
