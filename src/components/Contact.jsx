@@ -17,7 +17,7 @@ export default function Contact() {
     <section id="contact">
       <FadeIn className="sec-head">
         <h2>Contact</h2>
-        <span className="idx mono">04 / 04</span>
+        <span className="idx mono">05 / 05</span>
       </FadeIn>
       <FadeIn className="contact-grid">
         <div>
@@ -27,9 +27,10 @@ export default function Contact() {
             collaborations.
           </p>
           <div className="direct-links">
-            <a href="mailto:hello@matthewfajardo.dev">hello@matthewfajardo.dev</a>
+            <a href="mailto:gabriellematthewfajardo@gmail.com">gabriellematthewfajardo@gmail.com</a>
+            <a href="tel:+639682189099">+63 968-218-9099</a>
             <a href="https://github.com/For-matthew" target="_blank" rel="noopener noreferrer">GitHub / For-matthew</a>
-            <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn / matthew-fajardo</a>
+            <a href="https://www.linkedin.com/in/matthew-fajardo/" target="_blank" rel="noopener noreferrer">LinkedIn / matthew-fajardo</a>
           </div>
         </div>
         <form onSubmit={handleSubmit}>

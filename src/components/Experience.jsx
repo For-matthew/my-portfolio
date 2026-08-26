@@ -13,29 +13,24 @@ export default function Experience() {
     <section id="experience">
       <FadeIn className="sec-head">
         <h2>Experience</h2>
-        <span className="idx mono">03 / 04</span>
+        <span className="idx mono">03 / 05</span>
       </FadeIn>
 
       <FadeIn className="exp-card">
-        <div className="exp-tag mono">FEATURED — OJT PROJECT</div>
-        <h3>Company Website Design &amp; Admin System Management</h3>
-        <div className="exp-role mono">On-the-Job Training · Frontend &amp; Systems</div>
+        <div className="exp-tag mono">INTERNSHIP / OJT</div>
+        <h3>Digital Marketing Associate</h3>
+        <div className="exp-role mono">Getmeds Philippines, Inc. — Global Pharmaceutical Company, Manila · Jan 2026 – May 2026</div>
         <div className="exp-body">
-          <p>
-            Designed the company's website from the ground up, then handed the
-            build over to the IT team for deployment. Rather than stepping
-            away after handoff, I stayed on as the person responsible for the{' '}
-            <strong>admin system</strong> that kept the site current.
-          </p>
-          <p>
-            Whenever the company updated a product's price or swapped in new
-            product imagery, I made those changes directly through the admin
-            panel — keeping the live site accurate without needing a developer
-            to step in every time.
-          </p>
+          <ul className="exp-list">
+            <li>Managed and grew the company's social media presence across multiple platforms, driving consistent follower growth through content planning and audience engagement strategies.</li>
+            <li>Created original content, marketing copy, and ad copy for social media posts and campaigns, aligned with brand voice and compliance standards.</li>
+            <li>Conducted market and audience research to inform content direction and campaign targeting.</li>
+            <li>Assisted in website design and front-end development tasks, contributing to the maintenance and visual updates of company web pages.</li>
+            <li>Supported inventory-related documentation and coordination as part of cross-functional office tasks.</li>
+          </ul>
         </div>
         <div className="tags mono">
-          <span>HTML/CSS</span><span>JavaScript</span><span>PHP</span><span>Admin Systems</span>
+          <span>Social Media</span><span>Content Creation</span><span>Market Research</span><span>Web Development</span><span>Documentation</span>
         </div>
       </FadeIn>
 
