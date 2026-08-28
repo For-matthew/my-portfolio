@@ -39,23 +39,34 @@ export default function Hero() {
   return (
     <section className="hero bracket" ref={heroRef}>
       <div className="hero-bg" ref={bgRef} aria-hidden="true"></div>
-      <motion.div variants={container} initial="hidden" animate="show">
-        <motion.div variants={item} className="eyebrow mono">Information Systems Graduate</motion.div>
-        <motion.h1 variants={item}>
-          I build <em>interfaces</em> people actually enjoy using
-          <span className="cursor"></span>
-        </motion.h1>
-        <motion.p variants={item} className="role">
-          Matthew Fajardo — Frontend Developer with a design eye, and real
-          hands-on experience keeping a live admin system running.
-        </motion.p>
-        <motion.div variants={item} className="coords mono">
-          <div>LOCATION <span>Philippines</span></div>
-          <div>FOCUS <span>Frontend Development</span></div>
-          <div>BACKGROUND <span>BS Information Systems</span></div>
+
+      <div className="hero-inner">
+        <motion.div className="hero-text" variants={container} initial="hidden" animate="show">
+          <motion.div variants={item} className="eyebrow mono">Information Systems Graduate</motion.div>
+          <motion.h1 variants={item}>
+            I build <em>interfaces</em> people actually enjoy using
+            <span className="cursor"></span>
+          </motion.h1>
+          <motion.p variants={item} className="role">
+            Matthew Fajardo — Frontend Developer with a design eye, and real
+            hands-on experience keeping a live admin system running.
+          </motion.p>
+          <motion.div variants={item} className="coords mono">
+            <div>LOCATION <span>Philippines</span></div>
+            <div>FOCUS <span>Frontend Development</span></div>
+            <div>BACKGROUND <span>BS Information Systems</span></div>
+          </motion.div>
         </motion.div>
-      </motion.div>
-      <div className="scroll-cue mono"><div className="ln"></div>SCROLL</div>
+
+        <motion.div
+          className="hero-photo"
+          initial={{ opacity: 0, scale: 0.9, y: -10 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.2, ease: 'easeOut' }}
+        >
+          <img src="/images/profile-toga.png" alt="Matthew Fajardo" />
+        </motion.div>
+      </div>
     </section>
   )
 }

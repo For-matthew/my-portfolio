@@ -10,9 +10,9 @@ export default function About() {
     const ctx = gsap.context(() => {
       gsap.fromTo(
         portraitRef.current,
-        { yPercent: -8, scale: 1.08 },
+        { yPercent: -4, scale: 1.04 },
         {
-          yPercent: 8,
+          yPercent: 4,
           scale: 1,
           ease: 'none',
           scrollTrigger: {
@@ -35,8 +35,8 @@ export default function About() {
       </FadeIn>
       <FadeIn className="about-grid">
         <div className="portrait bracket" style={{ overflow: 'hidden' }}>
-          <div ref={portraitRef} className="portrait-parallax"></div>
-          <span className="comment-label">about.jsx</span>
+          <img ref={portraitRef} src="/images/profile-barong.png" alt="Matthew Fajardo" className="portrait-parallax" />
+
         </div>
         <div className="about-copy">
           <p>

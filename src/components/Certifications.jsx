@@ -27,12 +27,6 @@ const certs = [
     color: '#8FAE8B',
     href: 'https://www.freecodecamp.org/certification/gabriellematthewfajardo/a2-english-for-developers',
   },
-  {
-    title: 'B1 English for Developers',
-    issuer: 'freeCodeCamp',
-    color: '#8FAE8B',
-    href: 'https://www.freecodecamp.org/certification/gabriellematthewfajardo/b1-english-for-developers',
-  },
 ]
 
 export default function Certifications() {
