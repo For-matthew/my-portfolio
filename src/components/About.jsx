@@ -1,14 +1,41 @@
+import { useEffect, useRef } from 'react'
 import FadeIn from './FadeIn.jsx'
+import { gsap, ScrollTrigger } from '../gsapSetup.js'
 
 export default function About() {
+  const sectionRef = useRef(null)
+  const portraitRef = useRef(null)
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        portraitRef.current,
+        { yPercent: -8, scale: 1.08 },
+        {
+          yPercent: 8,
+          scale: 1,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: 'top bottom',
+            end: 'bottom top',
+            scrub: true,
+          },
+        }
+      )
+    }, sectionRef)
+    return () => ctx.revert()
+  }, [])
+
   return (
-    <section id="about">
+    <section id="about" ref={sectionRef}>
       <FadeIn className="sec-head">
         <h2>About</h2>
-        <span className="idx mono">01 / 05</span>
+        <span className="idx mono">01 / 06</span>
       </FadeIn>
       <FadeIn className="about-grid">
-        <div className="portrait bracket">
+        <div className="portrait bracket" style={{ overflow: 'hidden' }}>
+          <div ref={portraitRef} className="portrait-parallax"></div>
           <span className="comment-label">about.jsx</span>
         </div>
         <div className="about-copy">

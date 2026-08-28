@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import FadeIn from './FadeIn.jsx'
+import Magnetic from './Magnetic.jsx'
 
 export default function Contact() {
   const [sent, setSent] = useState(false)
@@ -17,7 +18,7 @@ export default function Contact() {
     <section id="contact">
       <FadeIn className="sec-head">
         <h2>Contact</h2>
-        <span className="idx mono">05 / 05</span>
+        <span className="idx mono">06 / 06</span>
       </FadeIn>
       <FadeIn className="contact-grid">
         <div>
@@ -46,9 +47,9 @@ export default function Contact() {
             <label htmlFor="message">Message</label>
             <textarea id="message" name="message" rows="4" required placeholder="Tell me about your project..."></textarea>
           </div>
-          <motion.button className="submit-btn" type="submit" whileHover={{ y: -2 }} whileTap={{ scale: 0.97 }}>
+          <Magnetic as={motion.button} className="submit-btn" type="submit" whileTap={{ scale: 0.97 }} strength={22}>
             Send message →
-          </motion.button>
+          </Magnetic>
           <p className="form-note mono">{sent ? 'Message sent. Thank you!' : ''}</p>
         </form>
       </FadeIn>

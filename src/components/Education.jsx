@@ -5,7 +5,7 @@ export default function Education() {
     <section id="education">
       <FadeIn className="sec-head">
         <h2>Education</h2>
-        <span className="idx mono">04 / 05</span>
+        <span className="idx mono">04 / 06</span>
       </FadeIn>
 
       <FadeIn className="exp-card">

@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import FadeIn from './FadeIn.jsx'
+import Magnetic from './Magnetic.jsx'
 
 const fccProjects = [
   { num: '01', title: 'Product Landing Page', desc: 'A coffee-brand landing page built with fixed nav, hero, and a responsive feature grid.', href: '/projects/product-landing-page.html' },
@@ -13,7 +14,7 @@ export default function Experience() {
     <section id="experience">
       <FadeIn className="sec-head">
         <h2>Experience</h2>
-        <span className="idx mono">03 / 05</span>
+        <span className="idx mono">03 / 06</span>
       </FadeIn>
 
       <FadeIn className="exp-card">
@@ -55,7 +56,7 @@ export default function Experience() {
             <div className="fcc-num mono">{p.num}</div>
             <h3>{p.title}</h3>
             <p>{p.desc}</p>
-            <span className="fcc-link mono">View project ↗</span>
+            <Magnetic as="span" className="fcc-link mono" strength={12}>View project ↗</Magnetic>
           </motion.a>
         ))}
       </div>
