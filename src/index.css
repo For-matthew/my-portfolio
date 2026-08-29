@@ -312,9 +312,11 @@ nav.scrolled{border-bottom-color:var(--line);}
   display:grid;place-items:center;position:relative;z-index:1;
   border:1px solid rgba(255,255,255,.11);
   background:rgba(0,0,0,.32);color:var(--ink);
-  font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;
   box-shadow:0 8px 20px rgba(0,0,0,.22);
+  transition:transform .25s ease,border-color .25s ease,color .25s ease;
 }
+.skill-mark svg{display:block;width:27px;height:27px;}
+.skill-tile:hover .skill-mark{border-color:rgba(255,122,69,.45);color:#ff9a63;transform:translateY(-1px);}
 .skill-name{position:relative;z-index:1;font-family:'Space Grotesk',sans-serif;font-size:14px;font-weight:600;color:var(--ink);line-height:1.25;}
 .skill-tile-2{background:
     radial-gradient(circle at 80% 18%, rgba(242,169,59,.18), transparent 38%),
