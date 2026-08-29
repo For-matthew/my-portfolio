@@ -3,10 +3,10 @@ import FadeIn from './FadeIn.jsx'
 import Magnetic from './Magnetic.jsx'
 
 const fccProjects = [
-  { num: '01', title: 'Product Landing Page', desc: 'A coffee-brand landing page built with fixed nav, hero, and a responsive feature grid.', href: '/projects/product-landing-page.html' },
-  { num: '02', title: 'Technical Documentation Page', desc: 'A sticky-sidebar reference doc covering HTML, CSS, JavaScript, and workflow basics.', href: '/projects/technical-documentation.html' },
-  { num: '03', title: 'Book Inventory App', desc: 'A styled data table using attribute selectors to drive status colors and rating dots.', href: '/projects/book-inventory.html' },
-  { num: '04', title: 'Survey Form', desc: 'A multi-field form with validation, radio groups, checkboxes, and a select menu.', href: '/projects/survey-form.html' },
+  { title: 'Product Landing Page', skill: 'Responsive Web Design', desc: 'A coffee-brand landing page built with fixed nav, hero, and a responsive feature grid.', image: '/images/fcc/product-landing-page.png', href: '/projects/product-landing-page.html' },
+  { title: 'Survey Form', skill: 'Responsive Web Design', desc: 'A multi-field form with validation, radio groups, checkboxes, and a select menu.', image: '/images/fcc/survey-form.png', href: '/projects/survey-form.html' },
+  { title: 'Technical Documentation Page', skill: 'Responsive Web Design', desc: 'A sticky-sidebar reference doc covering HTML, CSS, JavaScript, and workflow basics.', image: '/images/fcc/technical-documentation.png', href: '/projects/technical-documentation.html' },
+  { title: 'Drum Machine', skill: 'JavaScript', desc: 'A playable drum pad app with keyboard support, active-state feedback, and a live display.', image: '/images/fcc/drum-machine.png', href: '/projects/drum-machine.html' },
 ]
 
 export default function Experience() {
@@ -64,13 +64,13 @@ export default function Experience() {
       </FadeIn>
 
       <FadeIn className="exp-tag mono" delay={0.1} style={{ marginTop: 56 }}>
-        FREECODECAMP — RESPONSIVE WEB DESIGN
+        FREECODECAMP
       </FadeIn>
 
       <div className="fcc-grid">
         {fccProjects.map((p, i) => (
           <motion.a
-            key={p.num}
+            key={p.title}
             className="fcc-card"
             href={p.href}
             target="_blank"
@@ -79,9 +79,12 @@ export default function Experience() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.5, delay: i * 0.08 }}
-            whileHover={{ y: -3 }}
+            whileHover={{ y: -4 }}
           >
-            <div className="fcc-num mono">{p.num}</div>
+            <div className="fcc-image-wrap">
+              <img src={p.image} alt={`${p.title} screenshot`} className="fcc-image" loading="lazy" />
+            </div>
+            <span className="fcc-skill mono">{p.skill}</span>
             <h3>{p.title}</h3>
             <p>{p.desc}</p>
             <Magnetic as="span" className="fcc-link mono" strength={12}>View project ↗</Magnetic>
