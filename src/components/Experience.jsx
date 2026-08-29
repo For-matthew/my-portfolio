@@ -7,6 +7,8 @@ const fccProjects = [
   { title: 'Survey Form', skill: 'Responsive Web Design', desc: 'A multi-field form with validation, radio groups, checkboxes, and a select menu.', image: '/images/fcc/survey-form.png', href: '/projects/survey-form.html' },
   { title: 'Technical Documentation Page', skill: 'Responsive Web Design', desc: 'A sticky-sidebar reference doc covering HTML, CSS, JavaScript, and workflow basics.', image: '/images/fcc/technical-documentation.png', href: '/projects/technical-documentation.html' },
   { title: 'Drum Machine', skill: 'JavaScript', desc: 'A playable drum pad app with keyboard support, active-state feedback, and a live display.', image: '/images/fcc/drum-machine.png', href: '/projects/drum-machine.html' },
+  { title: 'Weather App', skill: 'JavaScript', desc: 'A city-based weather lookup using a live API, showing temperature, humidity, wind, and conditions.', image: '/images/fcc/weather-app.png', href: '/projects/weather-app.html' },
+  { title: 'Photography Exhibit', skill: 'Front End Development Libraries', desc: 'A responsive photo gallery grid built with Tailwind CSS utility classes.', image: '/images/fcc/photography-exhibit.png', href: '/projects/photography-exhibit.html' },
 ]
 
 export default function Experience() {
