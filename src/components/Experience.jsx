@@ -14,24 +14,26 @@ export default function Experience() {
     <section id="experience">
       <FadeIn className="sec-head">
         <h2>Experience</h2>
-        <span className="idx mono">03 / 06</span>
+        <span className="idx mono">03 / 07</span>
       </FadeIn>
 
       <FadeIn className="exp-card">
         <div className="exp-tag mono">INTERNSHIP / OJT</div>
-        <h3>Digital Marketing Associate</h3>
+        <h3>Web Development &amp; Digital Marketing Intern</h3>
         <div className="exp-role mono">Getmeds Philippines, Inc. — Global Pharmaceutical Company, Manila · Jan 2026 – May 2026</div>
         <div className="exp-body">
           <ul className="exp-list">
-            <li>Managed and grew the company's social media presence across multiple platforms, driving consistent follower growth through content planning and audience engagement strategies.</li>
-            <li>Created original content, marketing copy, and ad copy for social media posts and campaigns, aligned with brand voice and compliance standards.</li>
-            <li>Conducted market and audience research to inform content direction and campaign targeting.</li>
-            <li>Assisted in website design and front-end development tasks, contributing to the maintenance and visual updates of company web pages.</li>
-            <li>Supported inventory-related documentation and coordination as part of cross-functional office tasks.</li>
+            <li>Contributed to the design and front-end development of company websites, including visual design, content updates, website maintenance, and ongoing technical improvements.</li>
+            <li>Drove the digitalization and automation of manual departmental processes by transitioning workflows to fully digital, system-based solutions using AI, Google Workspace, and Google Apps Script to improve operational efficiency.</li>
+            <li>Provided technical support and troubleshooting assistance across departments, helping employees resolve system, software, hardware, and other technology-related concerns.</li>
+            <li>Managed and grew the company's social media presence across multiple platforms, driving consistent follower growth through strategic content planning and audience engagement.</li>
+            <li>Created original social media content, marketing copy, and advertising copy aligned with brand voice, business objectives, and platform compliance standards.</li>
+            <li>Conducted market, competitor, audience, and media landscape research to inform content strategy, campaign direction, and audience targeting.</li>
+            <li>Supported inventory-related documentation, coordination, and administrative processes as part of cross-functional office operations.</li>
           </ul>
         </div>
         <div className="tags mono">
-          <span>Social Media</span><span>Content Creation</span><span>Market Research</span><span>Web Development</span><span>Documentation</span>
+          <span>Web Development</span><span>Automation</span><span>IT Support</span><span>Social Media</span><span>Content Creation</span><span>Market Research</span><span>Documentation</span>
         </div>
       </FadeIn>
 

@@ -44,7 +44,7 @@ export default function Certifications() {
     <section id="certifications">
       <FadeIn className="sec-head">
         <h2>Certifications</h2>
-        <span className="idx mono">05 / 06</span>
+        <span className="idx mono">06 / 07</span>
       </FadeIn>
 
       <div className="cert-grid">

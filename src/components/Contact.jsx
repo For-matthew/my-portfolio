@@ -18,7 +18,7 @@ export default function Contact() {
     <section id="contact">
       <FadeIn className="sec-head">
         <h2>Contact</h2>
-        <span className="idx mono">06 / 06</span>
+        <span className="idx mono">07 / 07</span>
       </FadeIn>
       <FadeIn className="contact-grid">
         <div>

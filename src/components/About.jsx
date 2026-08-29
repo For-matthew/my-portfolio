@@ -31,7 +31,7 @@ export default function About() {
     <section id="about" ref={sectionRef}>
       <FadeIn className="sec-head">
         <h2>About</h2>
-        <span className="idx mono">01 / 06</span>
+        <span className="idx mono">01 / 07</span>
       </FadeIn>
       <FadeIn className="about-grid">
         <div className="portrait" style={{ overflow: 'hidden' }}>

@@ -5,9 +5,10 @@ const links = [
   { id: 'about', num: '01', label: 'About' },
   { id: 'skills', num: '02', label: 'Skills' },
   { id: 'experience', num: '03', label: 'Experience' },
-  { id: 'education', num: '04', label: 'Education' },
-  { id: 'certifications', num: '05', label: 'Certs' },
-  { id: 'contact', num: '06', label: 'Contact' },
+  { id: 'capstone', num: '04', label: 'Capstone' },
+  { id: 'education', num: '05', label: 'Education' },
+  { id: 'certifications', num: '06', label: 'Certs' },
+  { id: 'contact', num: '07', label: 'Contact' },
 ]
 
 export default function Nav() {

@@ -3,6 +3,7 @@ import Hero from './components/Hero.jsx'
 import About from './components/About.jsx'
 import Skills from './components/Skills.jsx'
 import Experience from './components/Experience.jsx'
+import Capstone from './components/Capstone.jsx'
 import Education from './components/Education.jsx'
 import Certifications from './components/Certifications.jsx'
 import OffClock from './components/OffClock.jsx'
@@ -17,6 +18,7 @@ export default function App() {
       <About />
       <Skills />
       <Experience />
+      <Capstone />
       <Education />
       <Certifications />
       <OffClock />
