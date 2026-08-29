@@ -20,10 +20,8 @@ export default function Hero() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Subtle parallax: background gradient drifts slower than scroll,
-      // giving the hero a bit of depth as the person scrolls past it.
       gsap.to(bgRef.current, {
-        yPercent: 18,
+        yPercent: 8,
         ease: 'none',
         scrollTrigger: {
           trigger: heroRef.current,
@@ -38,7 +36,20 @@ export default function Hero() {
 
   return (
     <section className="hero" ref={heroRef}>
-      <div className="hero-bg" ref={bgRef} aria-hidden="true"></div>
+      <div className="hero-bg" ref={bgRef} aria-hidden="true">
+        <video
+          className="hero-bg-video"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          aria-hidden="true"
+        >
+          <source src="/videos/portfolio-bg.mp4" type="video/mp4" />
+        </video>
+        <div className="hero-bg-overlay"></div>
+      </div>
 
       <div className="hero-inner">
         <motion.div className="hero-text" variants={container} initial="hidden" animate="show">

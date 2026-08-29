@@ -1,51 +1,76 @@
-import { useState } from 'react'
 import { motion } from 'framer-motion'
 import FadeIn from './FadeIn.jsx'
 
 const skillGroups = [
   {
     title: 'Front-End Development',
-    color: '#FF7A45',
-    items: ['HTML5', 'CSS3', 'JavaScript (ES6+)', 'React.js', 'Tailwind CSS', 'Bootstrap'],
+    icon: '⌘',
+    items: [
+      ['HTML5', 'HTML'],
+      ['CSS3', 'CSS'],
+      ['JavaScript (ES6+)', 'JS'],
+      ['React.js', 'React'],
+      ['Tailwind CSS', 'TW'],
+      ['Bootstrap', 'BS'],
+    ],
   },
   {
     title: 'Back-End Development',
-    color: '#C1613D',
-    items: ['Node.js', 'PHP'],
+    icon: '⌁',
+    items: [
+      ['Node.js', 'Node'],
+      ['PHP', 'PHP'],
+    ],
   },
   {
     title: 'Tools & Practices',
-    color: '#F2A93B',
-    items: ['Git/GitHub', 'VS Code', 'Canva', 'Figma', 'Responsive Design', 'WordPress', 'Vercel'],
+    icon: '⚙',
+    items: [
+      ['Git / GitHub', 'Git'],
+      ['VS Code', 'VS'],
+      ['Canva', 'Canva'],
+      ['Figma', 'Fig'],
+      ['Responsive Design', 'RWD'],
+      ['WordPress', 'WP'],
+      ['Vercel', 'V'],
+    ],
   },
   {
     title: 'AI Tools & Technologies',
-    color: '#8FAE8B',
-    items: ['ChatGPT', 'Claude', 'Gemini', 'GitHub Copilot', 'Cursor'],
+    icon: '✦',
+    items: [
+      ['ChatGPT', 'AI'],
+      ['Claude', 'CL'],
+      ['Gemini', 'GE'],
+      ['GitHub Copilot', 'CP'],
+      ['Cursor', 'CU'],
+    ],
   },
   {
     title: 'Other Skills',
-    color: '#D98E5C',
-    items: ['Basic SEO', 'Social Media Management', 'Content Management', 'Content Creation', 'Cross-Browser Testing', 'Debugging & Troubleshooting'],
+    icon: '◈',
+    items: [
+      ['Basic SEO', 'SEO'],
+      ['Social Media Management', 'SM'],
+      ['Content Management', 'CMS'],
+      ['Content Creation', 'CC'],
+      ['Cross-Browser Testing', 'QA'],
+      ['Debugging & Troubleshooting', 'DB'],
+    ],
   },
   {
     title: 'Soft Skills',
-    color: '#C99A6B',
-    items: ['Problem-solving', 'Teamwork', 'Communication', 'Adaptability'],
+    icon: '◎',
+    items: [
+      ['Problem-solving', 'PS'],
+      ['Teamwork', 'TW'],
+      ['Communication', 'COM'],
+      ['Adaptability', 'AD'],
+    ],
   },
 ]
 
 export default function Skills() {
-  const [selected, setSelected] = useState(new Set())
-
-  const toggle = (key) => {
-    setSelected((prev) => {
-      const next = new Set(prev)
-      next.has(key) ? next.delete(key) : next.add(key)
-      return next
-    })
-  }
-
   return (
     <section id="skills" className="skills-section">
       <div className="glow-blob glow-a"></div>
@@ -55,35 +80,28 @@ export default function Skills() {
         <h2>Skills &amp; Experience</h2>
         <span className="idx mono">02 / 07</span>
       </FadeIn>
-      <div className="skills-grid">
-        {skillGroups.map((g, i) => (
-          <FadeIn key={g.title} className="skill-card glass" delay={i * 0.05}>
-            <div className="swatch" style={{ background: g.color }}></div>
-            <h3>{g.title}</h3>
-            <div className="skill-pills">
-              {g.items.map((item) => {
-                const key = `${g.title}-${item}`
-                const isSelected = selected.has(key)
-                return (
-                  <motion.button
-                    key={key}
-                    type="button"
-                    className={`skill-pill mono${isSelected ? ' selected' : ''}`}
-                    onClick={() => toggle(key)}
-                    animate={{ scale: isSelected ? 1.06 : 1 }}
-                    whileHover={{ scale: isSelected ? 1.06 : 1.04 }}
-                    whileTap={{ scale: 0.94 }}
-                    transition={{ type: 'spring', stiffness: 400, damping: 20 }}
-                    style={
-                      isSelected
-                        ? { background: `${g.color}26`, borderColor: g.color, color: '#F5EDE4' }
-                        : undefined
-                    }
-                  >
-                    {item}
-                  </motion.button>
-                )
-              })}
+
+      <div className="skills-groups">
+        {skillGroups.map((group, groupIndex) => (
+          <FadeIn key={group.title} className="skill-group" delay={groupIndex * 0.04}>
+            <div className="skill-group-head">
+              <span className="skill-group-icon" aria-hidden="true">{group.icon}</span>
+              <h3>{group.title}</h3>
+            </div>
+
+            <div className="skill-tiles">
+              {group.items.map(([name, mark], index) => (
+                <motion.div
+                  key={name}
+                  className={`skill-tile skill-tile-${(index % 4) + 1}`}
+                  whileHover={{ y: -4, scale: 1.015 }}
+                  transition={{ type: 'spring', stiffness: 350, damping: 24 }}
+                >
+                  <span className="skill-tile-glow" aria-hidden="true"></span>
+                  <span className="skill-mark" aria-hidden="true">{mark}</span>
+                  <span className="skill-name">{name}</span>
+                </motion.div>
+              ))}
             </div>
           </FadeIn>
         ))}
