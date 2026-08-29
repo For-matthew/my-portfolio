@@ -37,7 +37,7 @@ export default function Hero() {
   }, [])
 
   return (
-    <section className="hero bracket" ref={heroRef}>
+    <section className="hero" ref={heroRef}>
       <div className="hero-bg" ref={bgRef} aria-hidden="true"></div>
 
       <div className="hero-inner">

@@ -12,10 +12,6 @@ import Footer from './components/Footer.jsx'
 export default function App() {
   return (
     <>
-      <div className="editor-bar">
-        <div className="dots"><span></span><span></span><span></span></div>
-        <div className="filename mono">portfolio<span>.jsx</span></div>
-      </div>
       <Nav />
       <Hero />
       <About />

@@ -6,7 +6,7 @@ const skillGroups = [
   {
     title: 'Front-End Development',
     color: '#FF7A45',
-    items: ['HTML5', 'CSS3', 'JavaScript (ES6+)', 'React.js', 'Bootstrap'],
+    items: ['HTML5', 'CSS3', 'JavaScript (ES6+)', 'React.js', 'Tailwind CSS', 'Bootstrap'],
   },
   {
     title: 'Back-End Development',
@@ -21,7 +21,7 @@ const skillGroups = [
   {
     title: 'AI Tools & Technologies',
     color: '#8FAE8B',
-    items: ['ChatGPT', 'Claude', 'Gemini', 'GitHub Copilot'],
+    items: ['ChatGPT', 'Claude', 'Gemini', 'GitHub Copilot', 'Cursor'],
   },
   {
     title: 'Other Skills',

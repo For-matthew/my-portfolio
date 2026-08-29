@@ -37,7 +37,7 @@ export default function Nav() {
 
   return (
     <nav className={scrolled ? 'scrolled' : ''}>
-      <div className="nav-mark"><span className="brk">{'</>'}</span> MATTHEW FAJARDO</div>
+      <div className="nav-mark">MATTHEW FAJARDO</div>
 
       <div className="nav-links">
         {links.map((link) => (

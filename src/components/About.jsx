@@ -34,9 +34,8 @@ export default function About() {
         <span className="idx mono">01 / 06</span>
       </FadeIn>
       <FadeIn className="about-grid">
-        <div className="portrait bracket" style={{ overflow: 'hidden' }}>
+        <div className="portrait" style={{ overflow: 'hidden' }}>
           <img ref={portraitRef} src="/images/profile-barong.png" alt="Matthew Fajardo" className="portrait-parallax" />
-
         </div>
         <div className="about-copy">
           <p>
