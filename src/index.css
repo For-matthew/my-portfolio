@@ -286,7 +286,7 @@ nav.scrolled{border-bottom-color:var(--line);}
   display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;
 }
 .skill-tile{
-  min-height:88px;position:relative;overflow:hidden;
+  min-height:80px;position:relative;overflow:hidden;
   display:flex;align-items:center;gap:14px;padding:14px 16px;
   border:1px solid rgba(255,255,255,.09);border-radius:12px;
   background:
@@ -315,7 +315,11 @@ nav.scrolled{border-bottom-color:var(--line);}
   font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;
   box-shadow:0 8px 20px rgba(0,0,0,.22);
 }
-.skill-name{position:relative;z-index:1;font-family:'Space Grotesk',sans-serif;font-size:14px;font-weight:600;color:var(--ink);line-height:1.25;}
+.skill-name{
+  position:relative;z-index:1;min-width:0;flex:1;
+  font-family:'Space Grotesk',sans-serif;font-size:14px;font-weight:600;color:var(--ink);
+  line-height:1.25;overflow-wrap:break-word;word-break:break-word;
+}
 .skill-tile-2{background:
     radial-gradient(circle at 80% 18%, rgba(242,169,59,.18), transparent 38%),
     radial-gradient(circle at 10% 90%, rgba(193,97,61,.14), transparent 44%),
