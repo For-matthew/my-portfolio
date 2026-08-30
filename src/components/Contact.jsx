@@ -4,15 +4,42 @@ import FadeIn from './FadeIn.jsx'
 import Magnetic from './Magnetic.jsx'
 
 export default function Contact() {
-  const [sent, setSent] = useState(false)
+  const [status, setStatus] = useState('idle') // idle | sending | sent | error
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    // NOTE: Placeholder lang ito for now. Kapag ready na tayo sa backend
-    // (Vercel serverless function papuntang email service), papalitan natin
-    // ito ng totoong fetch() call papunta sa /api/contact.
-    setSent(true)
+    const form = e.target
+    const payload = {
+      name: form.name.value,
+      email: form.email.value,
+      message: form.message.value,
+    }
+
+    setStatus('sending')
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      })
+
+      if (!res.ok) throw new Error('Request failed')
+
+      setStatus('sent')
+      form.reset()
+    } catch (err) {
+      console.error(err)
+      setStatus('error')
+    }
   }
+
+  const noteText = {
+    idle: '',
+    sending: 'Sending…',
+    sent: 'Message sent. Thank you!',
+    error: 'Something went wrong. Please try again, or email me directly.',
+  }[status]
 
   return (
     <section id="contact">
@@ -47,10 +74,10 @@ export default function Contact() {
             <label htmlFor="message">Message</label>
             <textarea id="message" name="message" rows="4" required placeholder="Tell me about your project..."></textarea>
           </div>
-          <Magnetic as={motion.button} className="submit-btn" type="submit" whileTap={{ scale: 0.97 }} strength={22}>
-            Send message →
+          <Magnetic as={motion.button} className="submit-btn" type="submit" whileTap={{ scale: 0.97 }} strength={22} disabled={status === 'sending'}>
+            {status === 'sending' ? 'Sending…' : 'Send message →'}
           </Magnetic>
-          <p className="form-note mono">{sent ? 'Message sent. Thank you!' : ''}</p>
+          <p className={`form-note mono${status === 'error' ? ' error' : ''}`}>{noteText}</p>
         </form>
       </FadeIn>
     </section>
