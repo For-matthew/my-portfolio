@@ -84,16 +84,7 @@ export default function Hero() {
           </motion.div>
 
           <motion.div variants={item} className="hero-actions">
-            <a
-              className="hero-resume-btn"
-              href="/Gabrielle-Matthew-Fajardo-Resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              download="Gabrielle-Matthew-Fajardo-Resume.pdf"
-            >
-              Download Resume ↓
-            </a>
-            <a className="hero-secondary-link" href="#contact">Get in touch</a>
+            <a className="hero-secondary-link" href="#contact">Get in touch →</a>
           </motion.div>
         </motion.div>
 

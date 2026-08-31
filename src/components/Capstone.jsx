@@ -65,7 +65,7 @@ export default function Capstone() {
           <span className="section-kicker mono">SELECTED WORK</span>
           <h2>Featured Project</h2>
         </div>
-        <span className="idx mono">05 / 08</span>
+        <span className="idx mono">04 / 07</span>
       </FadeIn>
 
       <FadeIn className="featured-project-intro">

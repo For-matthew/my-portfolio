@@ -1,7 +1,6 @@
 import Nav from './components/Nav.jsx'
 import Hero from './components/Hero.jsx'
 import About from './components/About.jsx'
-import Resume from './components/Resume.jsx'
 import Skills from './components/Skills.jsx'
 import Experience from './components/Experience.jsx'
 import Capstone from './components/Capstone.jsx'
@@ -17,7 +16,6 @@ export default function App() {
       <Nav />
       <Hero />
       <About />
-      <Resume />
       <Skills />
       <Experience />
       <Capstone />

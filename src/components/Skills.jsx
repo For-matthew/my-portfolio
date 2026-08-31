@@ -78,7 +78,7 @@ export default function Skills() {
 
       <FadeIn className="sec-head">
         <h2>Skills &amp; Experience</h2>
-        <span className="idx mono">03 / 08</span>
+        <span className="idx mono">02 / 07</span>
       </FadeIn>
 
       <div className="skills-groups">
