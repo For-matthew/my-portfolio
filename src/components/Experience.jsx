@@ -16,7 +16,7 @@ export default function Experience() {
     <section id="experience">
       <FadeIn className="sec-head">
         <h2>Experience</h2>
-        <span className="idx mono">03 / 07</span>
+        <span className="idx mono">04 / 08</span>
       </FadeIn>
 
       <FadeIn className="exp-card">

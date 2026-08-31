@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 
-export default function FadeIn({ children, className = '', delay = 0 }) {
+export default function FadeIn({ children, className = '', delay = 0, ...rest }) {
   return (
     <motion.div
       className={className}
@@ -8,6 +8,7 @@ export default function FadeIn({ children, className = '', delay = 0 }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.15 }}
       transition={{ duration: 0.6, delay }}
+      {...rest}
     >
       {children}
     </motion.div>

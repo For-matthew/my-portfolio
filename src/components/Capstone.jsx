@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import FadeIn from './FadeIn.jsx'
 
@@ -44,10 +44,19 @@ const features = [
 
 export default function Capstone() {
   const [active, setActive] = useState(0)
+  const [paused, setPaused] = useState(false)
   const current = shots[active]
 
   const next = () => setActive((value) => (value + 1) % shots.length)
   const previous = () => setActive((value) => (value - 1 + shots.length) % shots.length)
+
+  // auto-advance every 3s; restarts the countdown after any manual navigation,
+  // and pauses while the user is hovering over the showcase
+  useEffect(() => {
+    if (paused) return
+    const id = setInterval(next, 3000)
+    return () => clearInterval(id)
+  }, [paused, active])
 
   return (
     <section id="capstone" className="featured-project-section">
@@ -56,7 +65,7 @@ export default function Capstone() {
           <span className="section-kicker mono">SELECTED WORK</span>
           <h2>Featured Project</h2>
         </div>
-        <span className="idx mono">04 / 07</span>
+        <span className="idx mono">05 / 08</span>
       </FadeIn>
 
       <FadeIn className="featured-project-intro">
@@ -90,7 +99,12 @@ export default function Capstone() {
         </div>
       </FadeIn>
 
-      <FadeIn className="interface-showcase" delay={0.08}>
+      <FadeIn
+        className="interface-showcase"
+        delay={0.08}
+        onMouseEnter={() => setPaused(true)}
+        onMouseLeave={() => setPaused(false)}
+      >
         <div className="interface-head">
           <div>
             <span className="section-kicker mono">INTERFACE PREVIEW</span>

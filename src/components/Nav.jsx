@@ -1,14 +1,16 @@
 import { useState, useEffect } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
+import ThemeToggle from './ThemeToggle.jsx'
 
 const links = [
   { id: 'about', num: '01', label: 'About' },
-  { id: 'skills', num: '02', label: 'Skills' },
-  { id: 'experience', num: '03', label: 'Experience' },
-  { id: 'capstone', num: '04', label: 'Featured' },
-  { id: 'education', num: '05', label: 'Education' },
-  { id: 'certifications', num: '06', label: 'Certs' },
-  { id: 'contact', num: '07', label: 'Contact' },
+  { id: 'resume', num: '02', label: 'Resume' },
+  { id: 'skills', num: '03', label: 'Skills' },
+  { id: 'experience', num: '04', label: 'Experience' },
+  { id: 'capstone', num: '05', label: 'Featured' },
+  { id: 'education', num: '06', label: 'Education' },
+  { id: 'certifications', num: '07', label: 'Certs' },
+  { id: 'contact', num: '08', label: 'Contact' },
 ]
 
 export default function Nav() {
@@ -59,6 +61,19 @@ export default function Nav() {
         ))}
       </div>
 
+      <div className="nav-actions">
+        <a
+          className="resume-btn"
+          href="/Gabrielle-Matthew-Fajardo-Resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          download="Gabrielle-Matthew-Fajardo-Resume.pdf"
+        >
+          Download CV
+        </a>
+        <ThemeToggle />
+      </div>
+
       <button
         className="hamburger"
         aria-label="Toggle menu"
@@ -92,6 +107,18 @@ export default function Nav() {
                 <span className="mono">{link.num}</span> {link.label}
               </motion.a>
             ))}
+            <motion.a
+              href="/Gabrielle-Matthew-Fajardo-Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              download="Gabrielle-Matthew-Fajardo-Resume.pdf"
+              initial={{ opacity: 0, x: 24 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.08 + links.length * 0.05 }}
+              className="mobile-resume-link"
+            >
+              <span className="mono">↓</span> Download CV
+            </motion.a>
           </motion.div>
         )}
       </AnimatePresence>

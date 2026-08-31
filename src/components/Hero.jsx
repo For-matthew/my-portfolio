@@ -62,10 +62,38 @@ export default function Hero() {
             Matthew Fajardo — Frontend Developer with a design eye, and real
             hands-on experience keeping a live admin system running.
           </motion.p>
+
+          <motion.div variants={item} className="hero-tags">
+            <span className="hero-tag">Frontend Web Developer</span>
+            <span className="hero-tag hero-tag-status">Open to Work</span>
+          </motion.div>
+
           <motion.div variants={item} className="coords mono">
             <div>LOCATION <span>Philippines</span></div>
             <div>FOCUS <span>Frontend Development</span></div>
             <div>BACKGROUND <span>BS Information Systems</span></div>
+          </motion.div>
+
+          <motion.div variants={item} className="hero-tools">
+            <span className="hero-tools-label mono">Tools</span>
+            <div className="hero-tools-row">
+              {['VS Code', 'Vercel', 'GitHub', 'WordPress', 'EdrawMax', 'Figma'].map((tool) => (
+                <span key={tool} className="hero-tool-chip">{tool}</span>
+              ))}
+            </div>
+          </motion.div>
+
+          <motion.div variants={item} className="hero-actions">
+            <a
+              className="hero-resume-btn"
+              href="/Gabrielle-Matthew-Fajardo-Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              download="Gabrielle-Matthew-Fajardo-Resume.pdf"
+            >
+              Download Resume ↓
+            </a>
+            <a className="hero-secondary-link" href="#contact">Get in touch</a>
           </motion.div>
         </motion.div>
 
