@@ -77,6 +77,7 @@ export default function Experience() {
             href={p.href}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label={`View ${p.title} project`}
             initial={{ opacity: 0, y: 18 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}

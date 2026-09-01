@@ -59,7 +59,7 @@ export default function Capstone() {
   }, [paused, active])
 
   return (
-    <section id="capstone" className="featured-project-section">
+    <section id="capstone" className="featured-project-section" aria-label="Featured project section">
       <FadeIn className="sec-head">
         <div>
           <span className="section-kicker mono">SELECTED WORK</span>

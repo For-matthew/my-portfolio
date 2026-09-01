@@ -28,14 +28,14 @@ export default function About() {
   }, [])
 
   return (
-    <section id="about" ref={sectionRef}>
+    <section id="about" ref={sectionRef} aria-label="About section">
       <FadeIn className="sec-head">
         <h2>About</h2>
         <span className="idx mono">01 / 07</span>
       </FadeIn>
       <FadeIn className="about-grid">
         <div className="portrait" style={{ overflow: 'hidden' }}>
-          <img ref={portraitRef} src="/images/profile-barong.png" alt="Matthew Fajardo" className="portrait-parallax" />
+          <img ref={portraitRef} src="/images/profile-barong.png" alt="Matthew Fajardo, frontend developer" className="portrait-parallax" />
         </div>
         <div className="about-copy">
           <p>

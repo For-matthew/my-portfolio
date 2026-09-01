@@ -2,7 +2,7 @@ import FadeIn from './FadeIn.jsx'
 
 export default function Education() {
   return (
-    <section id="education">
+    <section id="education" aria-label="Education section">
       <FadeIn className="sec-head">
         <h2>Education</h2>
         <span className="idx mono">05 / 07</span>

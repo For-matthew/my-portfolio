@@ -38,8 +38,10 @@ export default function Nav() {
   const handleLinkClick = () => setMenuOpen(false)
 
   return (
-    <nav className={scrolled ? 'scrolled' : ''}>
-      <div className="nav-mark">MATTHEW FAJARDO</div>
+    <nav className={scrolled ? 'scrolled' : ''} aria-label="Main navigation">
+      <div className="nav-mark" aria-label="Matthew Fajardo">
+        MATTHEW FAJARDO
+      </div>
 
       <div className="nav-links">
         {links.map((link) => (
@@ -47,6 +49,7 @@ export default function Nav() {
             key={link.id}
             href={`#${link.id}`}
             className={active === link.id ? 'active' : ''}
+            aria-current={active === link.id ? 'page' : undefined}
           >
             <span>{link.num}</span> {link.label}
             {active === link.id && (
@@ -79,6 +82,7 @@ export default function Nav() {
         {menuOpen && (
           <motion.div
             className="mobile-menu"
+            aria-label="Mobile navigation"
             initial={{ x: '100%' }}
             animate={{ x: 0 }}
             exit={{ x: '100%' }}

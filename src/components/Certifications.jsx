@@ -49,16 +49,16 @@ export default function Certifications() {
 
       <div className="cert-grid">
         {certs.map((c, i) => (
-          <motion.a
+<motion.a
             key={c.title}
             className="cert-card"
             href={c.href}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label={`View ${c.title} certification`}
             initial={{ opacity: 0, y: 18 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.5, delay: i * 0.08 }}
             whileHover={{ y: -4 }}
           >
             <div className="cert-image-wrap">

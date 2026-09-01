@@ -1,0 +1,21 @@
+warning: in the working copy of 'index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/components/About.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/components/Capstone.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/components/Certifications.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/components/Education.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/components/Experience.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/components/Hero.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/components/Nav.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/components/Skills.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/index.css', LF will be replaced by CRLF the next time Git touches it
+ index.html                        |  40 [32m+[m[31m--[m
+ src/components/About.jsx          |   4 [32m+[m[31m-[m
+ src/components/Capstone.jsx       |   2 [32m+[m[31m-[m
+ src/components/Certifications.jsx |   4 [32m+[m[31m-[m
+ src/components/Education.jsx      |   2 [32m+[m[31m-[m
+ src/components/Experience.jsx     |   1 [32m+[m
+ src/components/Hero.jsx           |  13 [32m+[m[31m-[m
+ src/components/Nav.jsx            |   8 [32m+[m[31m-[m
+ src/components/Skills.jsx         |   7 [32m+[m[31m-[m
+ src/index.css                     | 615 [32m+++++++++++++++++++++++[m[31m---------------[m
+ 10 files changed, 427 insertions(+), 269 deletions(-)

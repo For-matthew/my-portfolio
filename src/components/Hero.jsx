@@ -34,8 +34,8 @@ export default function Hero() {
     return () => ctx.revert()
   }, [])
 
-  return (
-    <section className="hero" ref={heroRef}>
+return (
+    <section className="hero" ref={heroRef} aria-label="Introduction">
       <div className="hero-bg" ref={bgRef} aria-hidden="true">
         <video
           className="hero-bg-video"
@@ -48,7 +48,7 @@ export default function Hero() {
         >
           <source src="/videos/portfolio-bg.mp4" type="video/mp4" />
         </video>
-        <div className="hero-bg-overlay"></div>
+        <div className="hero-bg-overlay" aria-hidden="true"></div>
       </div>
 
       <div className="hero-inner">
@@ -84,7 +84,7 @@ export default function Hero() {
           </motion.div>
 
           <motion.div variants={item} className="hero-actions">
-            <a className="hero-secondary-link" href="#contact">Get in touch →</a>
+            <a className="hero-secondary-link" href="#contact" aria-label="Get in touch">Get in touch →</a>
           </motion.div>
         </motion.div>
 
@@ -93,8 +93,9 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.9, y: -10 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2, ease: 'easeOut' }}
+          aria-label="Profile photo"
         >
-          <img src="/images/profile-toga.png" alt="Matthew Fajardo" />
+          <img src="/images/profile-toga.png" alt="Matthew Fajardo, frontend developer" />
         </motion.div>
       </div>
     </section>
