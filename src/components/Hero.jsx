@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { gsap, ScrollTrigger } from '../gsapSetup.js'
+import { SkillIcon } from '../skillIcons.jsx'
 
 const container = {
   hidden: {},
@@ -77,8 +78,17 @@ return (
           <motion.div variants={item} className="hero-tools">
             <span className="hero-tools-label mono">Tools</span>
             <div className="hero-tools-row">
-              {['VS Code', 'Vercel', 'GitHub', 'WordPress', 'EdrawMax', 'Figma'].map((tool) => (
-                <span key={tool} className="hero-tool-chip">{tool}</span>
+              {[
+                { name: 'VS Code', mark: 'VS' },
+                { name: 'Vercel', icon: 'vercel', mark: 'V' },
+                { name: 'GitHub', icon: 'git', mark: 'GH' },
+                { name: 'WordPress', icon: 'wordpress', mark: 'WP' },
+                { name: 'EdrawMax', mark: 'ED' },
+                { name: 'Figma', icon: 'figma', mark: 'FIG' },
+              ].map((tool) => (
+                <span key={tool.name} className="hero-tool-icon" title={tool.name} aria-label={tool.name}>
+                  {tool.icon ? <SkillIcon slug={tool.icon} className="hero-tool-svg" /> : tool.mark}
+                </span>
               ))}
             </div>
           </motion.div>
